@@ -1,0 +1,35 @@
+head
+    title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel="stylesheet", href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+body
+    div(class="container")
+        div(class="col-sm-2")
+            .card(style='width:100px')
+            img.card-img-top(src='https://www.w3schools.com/bootstrap4/img_avatar1.png', alt='Card image', style='width:100%')
+            .card-body
+                h4.card-title vinhho 
+                p.card-text Type : Admin
+        div(class="col-sm=4")
+            ul(class='sidebar-nav')
+                    li 
+                        a(href='/catalog') Home
+                    li 
+                        a(href='/catalog/books') All books
+                    li 
+                        a(href='/catalog/authors') All authors
+                    li 
+                        a(href='/catalog/genres') All genres
+                    li 
+                        a(href='/catalog/bookinstances') All book-instances
+                    li 
+                        a(href='/catalog/author/create') Create new author
+                    li 
+                        a(href='/catalog/genre/create') Create new genre
+                    li 
+                        a(href='/catalog/book/create') Create new book
+                    li 
+                        a(href='/catalog/bookinstance/create') Create new book instance (copy)
+
+        block content1 

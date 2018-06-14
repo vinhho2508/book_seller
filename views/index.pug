@@ -1,21 +1,20 @@
 extends layout
-
 block content
-  h1= title
-  p Welcome to #[em LocalLibrary], a very basic Express website developed as a tutorial example on the Mozilla Developer Network.
-
-
-  h1 Dynamic content
-
-  if error
-    p Error getting dynamic content.
-  else
-
-    p The library has the following record counts:
-
-    ul
-      li #[strong Books:] !{data.book_count}
-      li #[strong Copies:] !{data.book_instance_count}
-      li #[strong Copies available:] !{data.book_instance_available_count} 
-      li #[strong Authors:] !{data.author_count}
-      li #[strong Genres:] !{data.genre_count}
+    h1= title
+    link(rel='stylesheet', type='text/css', href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css", media='all')
+    .album.py-5.bg-light
+      .container
+        .row
+        each book in book_list
+          .col-md-4
+            .card.mb-4.box-shadow
+              img.card-img-top(data-src='holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail', alt='Thumbnail [70%x225]', style='height: 150px; width: 70%; display: block;', src='https://www.fahasa.com/media/catalog/product/cache/1/small_image/270x364/9df78eab33525d08d6e5fb8d27136e95/d/a/dateeee.png', data-holder-rendered='true')
+              .card-body
+                p.card-text
+                a(href=book.url) #{book.title}
+                .d-flex.justify-content-between.align-items-center
+                  .btn-group
+                    button.btn.btn-sm.btn-outline-secondary(type='button') Buy
+                    button.btn.btn-sm.btn-outline-secondary(type='button') Add to cart
+                  big.text-muted 60,000 đ
+          

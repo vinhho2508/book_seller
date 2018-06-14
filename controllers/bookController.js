@@ -8,11 +8,7 @@ const { sanitizeBody } = require('express-validator/filter');
 
 var async = require('async');
 
-exports.login=function(req,res,next){
-    res.render('login');
-};
-
-exports.index = function(req, res) {
+/*exports.index = function(req, res) {
 
     async.parallel({
         book_count: function(callback) {
@@ -33,21 +29,41 @@ exports.index = function(req, res) {
     }, function(err, results) {
         res.render('index', { title: 'Local Library Home', error: err, data: results });
     });
-};
+};*/
 
 
 // Display list of all books.
-exports.book_list = function(req, res, next) {
+/* exports.book_list = function(req, res, next) {
 
   Book.find({}, 'title author ')
     .populate('author')
     .exec(function (err, list_books) {
       if (err) { return next(err); }
       // Successful, so render
-      res.render('book_list', { title: 'Book List', book_list:  list_books});
+      //res.render('book_list', { title: 'Book List', book_list:  list_books});
+      res.render('index', { title: 'Book List', book_list:  list_books});
     });
 
-};
+}; */
+exports.book_list = function(req, res, next) {
+    async.parallel({
+       book:function(callback){ Book.find({}, 'title author ')
+      .populate('author')
+      .exec(callback);},
+
+    genre:function(callback){
+          Genre.find().exec(callback);
+      },
+
+    },
+    function (err, results) {
+        if (err) { return next(err); }
+        // Successful, so render
+        //res.render('book_list', { title: 'Book List', book_list:  list_books});
+        res.render('index', { title: 'Book List',genre_list:results.genre, book_list:  results.book});
+      });
+  
+  };
 
 // Display detail page for a specific book.
 exports.book_detail = function(req, res, next) {
@@ -74,6 +90,7 @@ exports.book_detail = function(req, res, next) {
         }
         // Successful, so render.
         res.render('book_detail', { title: 'Title', book:  results.book, book_instances: results.book_instance } );
+        //res.render('index', { title: 'Title', book:  results.book, book_instances: results.book_instance } );
     });
 
 };

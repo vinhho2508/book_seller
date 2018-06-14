@@ -1,9 +1,28 @@
 block content
-html
-   head
-      title Signup
-   body
-         form(action = "/login" method = "POST")
-         input(name = "id" type = "text" required placeholder = "User ID")
-         input(name = "password" type = "password" required placeholder = "Password")
-         button(type = "Submit") Log in
+doctype html
+// saved from url=(0051)https://getbootstrap.com/docs/4.0/examples/sign-in/
+head
+  meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  meta(name='description', content='')
+  meta(name='author', content='')
+  link(rel='icon', href='https://getbootstrap.com/favicon.ico')
+  title Signin Template for Bootstrap
+  // Bootstrap core CSS
+  link(href='https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css', rel='stylesheet')
+  // Custom styles for this template
+  link(href='https://getbootstrap.com/docs/4.0/examples/sign-in/signin.css', rel='stylesheet')
+  style.
+form.form-signin
+  img.mb-4(src='./Signin Template for Bootstrap_files/bootstrap-solid.svg', alt='', width='72', height='72')
+  h1.h3.mb-3.font-weight-normal Please sign in
+  label.sr-only(for='inputEmail') Email address
+  input#inputEmail.form-control(type='email', placeholder='Email address', required='', autofocus='')
+  label.sr-only(for='inputPassword') Password
+  input#inputPassword.form-control(type='password', placeholder='Password', required='')
+  .checkbox.mb-3
+    label
+      input(type='checkbox', value='remember-me')
+      |  Remember me
+  button.btn.btn-lg.btn-primary.btn-block(type='submit') Sign in
+  p.mt-5.mb-3.text-muted &copy; 2017-2018
