@@ -1,22 +1,20 @@
 extends layout
-
-
 block content
   link(rel='stylesheet', type='text/css', href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css", media='all')
   .container
   .row(style='display: inline-block; border: solid 1px #808080; padding: 15px')
     .col-md-6
-      img.full-width-image(alt='Thumbnail [100%x225]', style='height: 300px; width: 100%; display: block;', src='https://i0.wp.com/www.tor.com/wp-content/uploads/2018/01/the-name-of-the-wind.png?fit=740%2C+9999&crop=0%2C0%2C100%2C555px&ssl=1', data-holder-rendered='true')
+      img.full-width-image(alt='Thumbnail [100%x225]', style='height: 300px; width: 100%; display: block;', src=book.picture, data-holder-rendered='true')
       br
       .row
         .col-md-3.col-sm-3.col-xs-6
           img.img-fluid(alt=book.title, src=book.picture)
         .col-md-3.col-sm-3.col-xs-6
-          img.img-fluid(alt='eCommerce Detail', src='http://www.prepbootstrap.com/Content/images/template/productslider/product_005.jpg')
+          img.img-fluid(alt=book.title, src=book.picture)
         .col-md-3.col-sm-3.col-xs-6
-          img.img-fluid(alt='eCommerce Detail', src='http://www.prepbootstrap.com/Content/images/template/productslider/product_005.jpg')
-        .col-md-3.col-sm-3.col-6
-          img.img-fluid(alt='eCommerce Detail', src='http://www.prepbootstrap.com/Content/images/template/productslider/product_005.jpg')
+          img.img-fluid(alt=book.title, src=book.picture)
+        .col-md-3.col-sm-3.col-xs-6
+          img.img-fluid(alt=book.title, src=book.picture)
     .col-md-6
       h2 #{book.title}
       h3
@@ -32,7 +30,7 @@ block content
       br
       h4.text-xs-right
         | Current price: 
-        span(style='color: #197BB5; font-size: 35px;') $950.00
+        span(style='color: #197BB5; font-size: 35px;') $ #{book.price}
       p.text-xs-right
         p #[strong ISBN:] #{book.isbn}
       br

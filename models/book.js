@@ -8,7 +8,9 @@ var BookSchema = new Schema({
     summary: {type: String, required: true},
     isbn: {type: String, required: true},
     picture:{type:String,required:true},
-    genre: [{ type: Schema.ObjectId, ref: 'Genre' }]
+    genre: [{ type: Schema.ObjectId, ref: 'Genre' }],
+    amount:{type:Number,min:0,required:true},
+    price:{type:Number,required:true,min:0}
 
 });
 
