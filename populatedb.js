@@ -145,6 +145,24 @@ function createGenreAuthors(cb) {
 		function(callback) {
 			authorCreate('Nassim', 'Nicholas Taleb', 'https://upload.wikimedia.org/wikipedia/commons/9/9b/Taleb_mug.JPG', '1960', false, callback);
 		},
+		function(callback) {
+			authorCreate('Baird', 'Thomas Spalding', 'http://static.komo.vn/files/thumbnail/210/250/210x250-spalding-b.jpg', '1872-10-3', '1953-3-18', callback);
+		},
+		function(callback) {
+			authorCreate('Dan', 'Ariely', 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Dan_Ariely_-_PopTech_2010_-_Camden%2C_Maine.jpg/220px-Dan_Ariely_-_PopTech_2010_-_Camden%2C_Maine.jpg', '1967-4-29', false, callback);
+		},
+		function(callback) {
+			authorCreate('Paulo ', 'Coelho', 'http://www.gstatic.com/tv/thumb/persons/686748/686748_v9_ba.jpg', '1947-8-24', false, callback);
+		},
+		function(callback) {
+			authorCreate('George', 'Samuel Clason', 'https://images.gr-assets.com/authors/1453455124p5/688.jpg', '1874-11-7', '1957-4-7', callback);
+		},
+		function(callback) {
+			authorCreate('Khaled ', 'Hosseini', 'https://images.gr-assets.com/authors/1359753468p5/569.jpg', '1965-3-4', false, callback);
+		},
+		function(callback) {
+			authorCreate('Che', 'Guevara', 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/CheHigh.jpg/800px-CheHigh.jpg', '1928-6-14', '1967-10-9', callback);
+		},
 
         function(callback) {
           genreCreate("Fantasy", callback);
@@ -182,6 +200,24 @@ function createGenreAuthors(cb) {
 		function(callback){
 			genreCreate("Nonfiction", callback);
         },
+		function(callback){
+			genreCreate("Western Novel", callback);
+        },
+		function(callback){
+			genreCreate("Behavioral Finance", callback);
+        },
+		function(callback){
+			genreCreate("Novel", callback);
+        },
+		function(callback){
+			genreCreate("Self help", callback);
+        },
+		function(callback){
+			genreCreate("Historical fiction", callback);
+        },
+		function(callback){
+			genreCreate("Memoir", callback);
+        },
         ],
         // optional callback
         cb);
@@ -209,7 +245,7 @@ function createBooks(cb) {
           bookCreate('The Godfather', "It's the day of Don Vito Corelones daughter's wedding. And like any good mob boss, he's spending his time receiving guests who are requesting favors from him. Outside, the wedding is in full swing, and we meet a bunch of different characters, including the Don's sons, Michael and Sonny. ", '9780765378972', authors[5],'https://vnwriter.net/wp-content/uploads/2016/11/sach-bo-gia.gif', [genres[8]],15,81, callback);
         },
         function(callback) {
-          bookCreate('A Brief History Of Time', "We live our daily lives with almost no understanding of the world around us. We also rarely contemplate the mechanism that produces sunlight - an important factor contributing to life, to gravity - the glue that binds us to Earth, if different from them. We will rotate and drift into outer space, the atoms that make up all of us and we are completely dependent on their sustainability. With the exception of children (because they know too little to hesitate to ask important questions), few of us take the time to wonder why nature is like this, Where does the universe come from, or is it forever like this, is there going to be a time when the time will come back, the consequences are before the cause or not; Is there a final limit to human understanding?", '9780765378933', authors[6],'https://vnwriter.net/wp-content/uploads/2017/10/sach-luoc-su-thoi-gian.gif', [genres[9],],150,210, callback);
+          bookCreate('A Brief History Of Time', "We live our daily lives with almost no understanding of the world around us. We also rarely contemplate the mechanism that produces sunlight - an important factor contributing to life, to gravity - the glue that binds us to Earth, if different from them. We will rotate and drift into outer space, the atoms that make up all of us and we are completely dependent on their sustainability. With the exception of children (because they know too little to hesitate to ask important questions), few of us take the time to wonder why nature is like this, Where does the universe come from, or is it forever like this, is there going to be a time when the time will come back, the consequences are before the cause or not; Is there a final limit to human understanding?", '9780765378933', authors[6],'https://vnwriter.net/wp-content/uploads/2017/10/sach-luoc-su-thoi-gian.gif', [genres[9],],15,210, callback);
         },
 		function(callback) {
           bookCreate("Man's Search For Meaning", "This is a book about survival. Like many of the Jews living in Germany and Eastern Europe, who thought they were safe in the 1930s, Frankl spent a lot of time in the concentration camps and German camps of extermination. the Nazis. The miracle that he survived, the phrase 'steel that I was' can accurately portray this case. But in Finding a way to live, the author makes little mention of the hardships, traumas, and losses he has experienced, and instead he writes about the sources of power that helped him survive. He bitterly talked about prisoners who surrendered their lives, lost hope in the future, and must have been the first to die. Few people die from lack of food and medicine, but most of them die of lack of hope, lack of life.", '9780765331892', authors[7],'https://vnwriter.net/wp-content/uploads/2017/10/sach-di-tim-le-song.jpg', [genres[10],],40,51, callback);
@@ -218,7 +254,25 @@ function createBooks(cb) {
           bookCreate("Quiet", "Almost all painters, writers, sculptors, engineers, composers and inventors are introverted. Introverts often enjoy spending time alone or together with a small number of friends rather than large groups. The truth is, when you have a big problem or an important one that needs maximum confidence, an intro is the right choice for those things. They usually focus on a single activity at a time and prefer to observe the situation before engaging, they have imagination rich and often have a lot of analysis before speaking. Introverts can easily be overwhelmed by stimulation from social gatherings or social gatherings that involve too many people.", '97807651897203', authors[8],'https://vnwriter.net/wp-content/uploads/2017/01/sach-quiet.jpg', [genres[10],],40,45, callback);
         },
 		function(callback) {
-          bookCreate("The Black Swan", "Why do not we notice the 'black swan' phenomenon until after they happen? According to Taleb, in part because we humans tie ourselves to the details, we should focus on the general. We focus on what we know from time to time to ignore things we do not know. Therefore, we can not evaluate opportunities, can not resist the tendency to simplify, narrate and classify, and are not sufficiently generous to reward those who can imagine 'things can not'. Delicate, overwhelming and amazing, the Black Swan will change your outlook on the world. Taleb is actually the author of the book, with witty, extravagant and unusual stories. He is a master of knowledge in many fields, from cognitive science, business to probability theory. Black Swan is a landmark book - it is a 'black swan' itself.", '97807651888803', authors[9],'https://vnwriter.net/wp-content/uploads/2016/12/sach-thien-nga-den.jpg', [genres[11],],110,150, callback);
+          bookCreate("The Black Swan", "Why do not we notice the 'black swan' phenomenon until after they happen? According to Taleb, in part because we humans tie ourselves to the details, we should focus on the general. We focus on what we know from time to time to ignore things we do not know. Therefore, we can not evaluate opportunities, can not resist the tendency to simplify, narrate and classify, and are not sufficiently generous to reward those who can imagine 'things can not'. Delicate, overwhelming and amazing, the Black Swan will change your outlook on the world. Taleb is actually the author of the book, with witty, extravagant and unusual stories. He is a master of knowledge in many fields, from cognitive science, business to probability theory. Black Swan is a landmark book - it is a 'black swan' itself.", '97807651888803', authors[9],'https://vnwriter.net/wp-content/uploads/2016/12/sach-thien-nga-den.jpg', [genres[11],],11,150, callback);
+        },
+		function(callback) {
+          bookCreate("Life And Teaching Of The Masters Of The Far East", "The Journey to the East tells the experiences of a group of leading experts from the Royal Society of British Science who are sent to India to study the mystics and supernatural abilities of man. For two years, traveling through Indian temples and temples, they saw many laws, superstitions, even scams ... of many magi, Taoists ... they were exposed to their positions, they were Experience, deep understanding of the ancient and esoteric sciences of Indian culture such as yoga, meditation, contemplation, karmic retribution, the law of cause and effect, life and death.", '97807651987555', authors[10],'https://vnwriter.net/wp-content/uploads/2017/10/sach-hanh-trinh-ve-phuong-dong-689x1024.jpg', [genres[12],],30,94, callback);
+        },
+		function(callback) {
+          bookCreate("Predictably Irrational", "You are ready to withdraw 2 thousand for a poor beggar on the road. But you yourself also embankment 2 thousand silver with her crush when selling old newspapers in the house.You are willing to spend $ 10 million to take beautiful wedding photos that only look a few times and then put in the closet. But you will certainly consider and consider carefully when deciding to buy a camera for $ 10 million while you can use it for many years.", '97807651330367', authors[11],'https://vnwriter.net/wp-content/uploads/2016/11/sach-phi-ly-tri.png', [genres[13],],50,114, callback);
+        },
+		function(callback) {
+          bookCreate("The Alchemist", "Paulo Coelho's alchemist novel is a simple, compassionate and poetic fairy tale infused with the mystical wisdom of the East. In its first publication in Brazil in 1988, the book sold only 900 copies. But, with the special fate of the book for all humanity, beyond the national borders, the Alchemyst has shaken millions of souls, becoming one of the best-selling books of all time, and can change the reader's life.", '97807651654412', authors[12],'https://vnwriter.net/wp-content/uploads/2016/09/sach-nha-gia-kim-639x1024.jpg', [genres[14],],50,52, callback);
+        },
+		function(callback) {
+          bookCreate("The Richest Man In Babylon", "When it comes to money, we often refer to the law of gravity and it is always universal and invariable in every case. Over time and developed, this rule has been experimented and extracted into the secret not only to ensure you a bag full, but also help you have a balanced life to be able to grow. Better than your potential in other areas of your life. In fact, no one can deny that material abundance can make a person's life better. Particularly in the field of business, financial strength is the primary means of measuring entrepreneurial achievement.", '97807651995511', authors[13],'https://vcdn.tikicdn.com/cache/550x550/media/catalog/product/i/m/img081_9_1.jpg', [genres[15],],50,46, callback);
+        },
+		function(callback) {
+          bookCreate("The Kite Runner", "The story is the autobiography of the american-american american writer about the happy childhood years as well as the mistakes, the days of drifting on the land and the journey back to the ruined homeland to redeem for myself and my dead father. According to Amir's recollections, the reader returned more than twenty years ago, when Amir was a twelve-year-old boy in Baba's rich and well-guarded arms. Embracing Amir throughout his childhood was Hassan, the son of the housekeeper Ali, a nimble, strong boy who broke up several times to protect Amir. But Hassan's friendship and devotion were unremarkable. On a winter's day in 1975, Hassan, in an attempt to protect Amir's green kite, was assaulted and humiliated by the children.", '9780765115512', authors[14],'https://upload.wikimedia.org/wikipedia/en/6/62/Kite_runner.jpg', [genres[16],],10,46, callback);
+        },
+		function(callback) {
+          bookCreate("The Motorcycle Diaries", "A memoir that traces the early travels of Marxist revolutionary Ernesto 'Che' Guevara, then a 23-year-old medical student, and his friend Alberto Granado, a 29-year-old biochemist. Leaving Buenos Aires, Argentina, in January 1952 on the back of a sputtering single cylinder 1939 Norton 500cc dubbed La Poderosa ("The Mighty One"), they desired to explore the South America they only knew from books.[1] During the formative odyssey Guevara is transformed by witnessing the social injustices of exploited mine workers, persecuted communists, ostracized lepers, and the tattered descendants of a once-great Inca civilization. By journey's end, they had travelled for a symbolic nine months by motorcycle, steamship, raft, horse, bus, and hitchhiking, covering more than 8,000 kilometres (5,000 mi) across places such as the Andes, Atacama Desert, and the Amazon River Basin. The diary ends with a declaration by Guevara, born into an upper-middle-class family, displaying his willingness to fight and die for the cause of the poor, and his dream of seeing a united Latin America.", '9780765369874', authors[15],'https://upload.wikimedia.org/wikipedia/en/e/e0/Motobook7.jpg', [genres[17],],5,70, callback);
         },
         ],
         // optional callback
