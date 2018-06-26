@@ -13,7 +13,7 @@ var async = require('async')
 var Book = require('./models/book')
 var Author = require('./models/author')
 var Genre = require('./models/genre')
-var User=require('./models/user');
+//var User=require('./models/user');
 
 var mongoose = require('mongoose');
 var mongoDB = userArgs[0];
@@ -26,7 +26,7 @@ var authors = []
 var genres = []
 var books = []
 
-var user=[]
+//var user=[]
 
 function authorCreate(first_name, family_name,pic, d_birth, d_death, cb) {
   authordetail = {first_name:first_name , family_name: family_name,picture:pic }
@@ -100,7 +100,7 @@ function bookCreate(title, summary, isbn, author,pic, genre,amount,price, cb) {
 
 
 
-function createUsers(cb){
+/*function createUsers(cb){
   async.parallel([
     function(callback){
       userCreate('admin','admin',1,callback);
@@ -112,7 +112,7 @@ function createUsers(cb){
       userCreate('phuvinh','phuvinh',0,callback);
     },
   ],cb)
-}
+}*/
 function createGenreAuthors(cb) {
     async.parallel([
         function(callback) {
@@ -130,6 +130,13 @@ function createGenreAuthors(cb) {
         function(callback) {
           authorCreate('Jim', 'Jones','https://www.biography.com/.image/t_share/MTIwNjA4NjM0MDc0MjY5MTk2/jim-jones-10367607-1-402.jpg', '1971-12-16', false, callback);
         },
+		function(callback) {
+          authorCreate('Mario', 'Puzo','https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Mario_Puzo.jpg/220px-Mario_Puzo.jpg', '1920-10-15', '1999-7-2', callback);
+        },
+		function(callback) {
+			authorCreate('Stephen', 'Hawking', 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Stephen_Hawking.StarChild.jpg/200px-Stephen_Hawking.StarChild.jpg', '1942-1-8', '2018-3-14', callback);
+		}
+
         function(callback) {
           genreCreate("Fantasy", callback);
         },
@@ -153,6 +160,12 @@ function createGenreAuthors(cb) {
         },
         function(callback) {
           genreCreate("Dictionary", callback);
+        },
+		function(callback) {
+          genreCreate("Criminal hypothesis", callback);
+        },
+		function(callback){
+			genreCreate("Cosmography", callback);
         },
         ],
         // optional callback
@@ -178,10 +191,10 @@ function createBooks(cb) {
           bookCreate("Death Wave","In Ben Bova's previous novel New Earth, Jordan Kell led the first human mission beyond the solar system. They discovered the ruins of an ancient alien civilization. But one alien AI survived, and it revealed to Jordan Kell that an explosion in the black hole at the heart of the Milky Way galaxy has created a wave of deadly radiation, expanding out from the core toward Earth. Unless the human race acts to save itself, all life on Earth will be wiped out...", '9780765379504', authors[1],'./pics/Harry1.jpg', [genres[1],],30,60, callback);
         },
         function(callback) {
-          bookCreate('Test Book 1', 'Summary of test book 1', 'ISBN111111', authors[4],'./pics/Harry1.jpg', [genres[0],genres[1]],15,100, callback);
+          bookCreate('The Godfather', "It's the day of Don Vito Corelones daughter's wedding. And like any good mob boss, he's spending his time receiving guests who are requesting favors from him. Outside, the wedding is in full swing, and we meet a bunch of different characters, including the Don's sons, Michael and Sonny. ", '9780765378972', authors[5],'./pics/Harry1.jpg', [genres[8]],15,81, callback);
         },
         function(callback) {
-          bookCreate('Test Book 2', 'Summary of test book 2', 'ISBN222222', authors[4],'./pics/Harry1.jpg', [genres[3],],20,35, callback);
+          bookCreate('A Brief History Of Time', "We live our daily lives with almost no understanding of the world around us. We also rarely contemplate the mechanism that produces sunlight - an important factor contributing to life, to gravity - the glue that binds us to Earth, if different from them. We will rotate and drift into outer space, the atoms that make up all of us and we are completely dependent on their sustainability. With the exception of children (because they know too little to hesitate to ask important questions), few of us take the time to wonder why nature is like this, Where does the universe come from, or is it forever like this, is there going to be a time when the time will come back, the consequences are before the cause or not; Is there a final limit to human understanding?", '9780765378933', authors[6],'./pics/Harry1.jpg', [genres[9],],150,210, callback);
         }
         ],
         // optional callback
