@@ -164,7 +164,10 @@ function createGenreAuthors(cb) {
 		authorCreate('Che', 'Guevara', 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/CheHigh.jpg/800px-CheHigh.jpg', '1928-6-14', '1967-10-9', callback);
 	},
    	function(callback) {
-		authorCreate('Du', 'Nguyen', 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/T%C6%B0%E1%BB%A3ng_%C4%91%C3%A0i_c%E1%BB%A5_Nguy%E1%BB%85n_Du.jpg/222px-T%C6%B0%E1%BB%A3ng_%C4%91%C3%A0i_c%E1%BB%A5_Nguy%E1%BB%85n_Du.jpg', '1766-1-03', '1920-9-16', callback);
+		authorCreate('Du', 'Nguyen', 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/T%C6%B0%E1%BB%A3ng_%C4%91%C3%A0i_c%E1%BB%A5_Nguy%E1%BB%85n_Du.jpg/222px-T%C6%B0%E1%BB%A3ng_%C4%91%C3%A0i_c%E1%BB%A5_Nguy%E1%BB%85n_Du.jpg', '1380-1-03', '1442-9-16', callback);
+	},
+    	function(callback) {
+		authorCreate('Trai', 'Nguyen', 'https://znews-photo-td.zadn.vn/w1024/Uploaded/jbvunte/2017_05_05/Cau_4_2.jpg', '1766-1-03', '1920-9-16', callback);
 	},
 
         function(callback) {
