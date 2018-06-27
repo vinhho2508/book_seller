@@ -169,6 +169,9 @@ function createGenreAuthors(cb) {
     	function(callback) {
 		authorCreate('Trai', 'Nguyen', 'https://znews-photo-td.zadn.vn/w1024/Uploaded/jbvunte/2017_05_05/Cau_4_2.jpg', '1766-1-03', '1920-9-16', callback);
 	},
+	function(callback) {
+		authorCreate('Binh Khiem', 'Nguyen', 'https://thuvienlichsu.com/uploads/images/20140327211643000000-nguyenbinhkhiem.jpg', '1491-1-03', '1585-11-28', callback);
+	},
 
         function(callback) {
           genreCreate("Fantasy", callback);
