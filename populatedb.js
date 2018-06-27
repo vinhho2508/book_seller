@@ -133,36 +133,36 @@ function createGenreAuthors(cb) {
 		function(callback) {
           authorCreate('Mario', 'Puzo','https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Mario_Puzo.jpg/220px-Mario_Puzo.jpg', '1920-10-15', '1999-7-2', callback);
         },
-		function(callback) {
-			authorCreate('Stephen', 'Hawking', 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Stephen_Hawking.StarChild.jpg/200px-Stephen_Hawking.StarChild.jpg', '1942-1-8', '2018-3-14', callback);
-		},
-		function(callback) {
-			authorCreate('Viktor', 'Frankl', 'http://www.beacon.org/Assets/ContributorImages/1657.jpg', '1905-3-26', '1997-9-2', callback);
-		},
-		function(callback) {
-			authorCreate('SuSan', 'Cain', 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/SusanCainPortrait_250px_20120305.jpg/220px-SusanCainPortrait_250px_20120305.jpg', '1968-5-1', false, callback);
-		},
-		function(callback) {
-			authorCreate('Nassim', 'Nicholas Taleb', 'https://upload.wikimedia.org/wikipedia/commons/9/9b/Taleb_mug.JPG', '1960', false, callback);
-		},
-		function(callback) {
-			authorCreate('Baird', 'Thomas Spalding', 'http://static.komo.vn/files/thumbnail/210/250/210x250-spalding-b.jpg', '1872-10-3', '1953-3-18', callback);
-		},
-		function(callback) {
-			authorCreate('Dan', 'Ariely', 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Dan_Ariely_-_PopTech_2010_-_Camden%2C_Maine.jpg/220px-Dan_Ariely_-_PopTech_2010_-_Camden%2C_Maine.jpg', '1967-4-29', false, callback);
-		},
-		function(callback) {
-			authorCreate('Paulo ', 'Coelho', 'http://www.gstatic.com/tv/thumb/persons/686748/686748_v9_ba.jpg', '1947-8-24', false, callback);
-		},
-		function(callback) {
-			authorCreate('George', 'Samuel Clason', 'https://images.gr-assets.com/authors/1453455124p5/688.jpg', '1874-11-7', '1957-4-7', callback);
-		},
-		function(callback) {
-			authorCreate('Khaled ', 'Hosseini', 'https://images.gr-assets.com/authors/1359753468p5/569.jpg', '1965-3-4', false, callback);
-		},
-		function(callback) {
-			authorCreate('Che', 'Guevara', 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/CheHigh.jpg/800px-CheHigh.jpg', '1928-6-14', '1967-10-9', callback);
-		},
+	function(callback) {
+		authorCreate('Stephen', 'Hawking', 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Stephen_Hawking.StarChild.jpg/200px-Stephen_Hawking.StarChild.jpg', '1942-1-8', '2018-3-14', callback);
+	},
+	function(callback) {
+		authorCreate('Viktor', 'Frankl', 'http://www.beacon.org/Assets/ContributorImages/1657.jpg', '1905-3-26', '1997-9-2', callback);
+	},
+	function(callback) {
+		authorCreate('SuSan', 'Cain', 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/SusanCainPortrait_250px_20120305.jpg/220px-SusanCainPortrait_250px_20120305.jpg', '1968-5-1', false, callback);
+	},
+	function(callback) {
+		authorCreate('Nassim', 'Nicholas Taleb', 'https://upload.wikimedia.org/wikipedia/commons/9/9b/Taleb_mug.JPG', '1960', false, callback);
+	},
+	function(callback) {
+		authorCreate('Baird', 'Thomas Spalding', 'http://static.komo.vn/files/thumbnail/210/250/210x250-spalding-b.jpg', '1872-10-3', '1953-3-18', callback);
+	},
+	function(callback) {
+		authorCreate('Dan', 'Ariely', 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Dan_Ariely_-_PopTech_2010_-_Camden%2C_Maine.jpg/220px-Dan_Ariely_-_PopTech_2010_-_Camden%2C_Maine.jpg', '1967-4-29', false, callback);
+	},
+	function(callback) {
+		authorCreate('Paulo ', 'Coelho', 'http://www.gstatic.com/tv/thumb/persons/686748/686748_v9_ba.jpg', '1947-8-24', false, callback);
+	},
+	function(callback) {
+		authorCreate('George', 'Samuel Clason', 'https://images.gr-assets.com/authors/1453455124p5/688.jpg', '1874-11-7', '1957-4-7', callback);
+	},
+	function(callback) {
+		authorCreate('Khaled ', 'Hosseini', 'https://images.gr-assets.com/authors/1359753468p5/569.jpg', '1965-3-4', false, callback);
+	},
+	function(callback) {
+		authorCreate('Che', 'Guevara', 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/CheHigh.jpg/800px-CheHigh.jpg', '1928-6-14', '1967-10-9', callback);
+	},
 
         function(callback) {
           genreCreate("Fantasy", callback);
